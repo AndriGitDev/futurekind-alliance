@@ -4,20 +4,20 @@
 
 :root {
   color-scheme: dark;
-  --void: #030611;
+  --void: #030711;
   --void-2: #07111f;
-  --ink: #e9fbff;
-  --muted: #8fb3c4;
-  --cyan: #65f7ff;
-  --violet: #9b7cff;
-  --lime: #c8ff6a;
-  --rose: #ff5ea8;
+  --ink: #eaf7f5;
+  --muted: #95aeb8;
+  --cyan: #8fe8e2;
+  --violet: #8ea0ff;
+  --lime: #b8e6c9;
+  --rose: #d9c98b;
   --panel: rgba(7, 17, 31, 0.72);
   --panel-strong: rgba(9, 24, 42, 0.88);
-  --line: rgba(101, 247, 255, 0.20);
-  --line-strong: rgba(101, 247, 255, 0.46);
-  --glow-cyan: 0 0 34px rgba(101, 247, 255, 0.28);
-  --glow-violet: 0 0 44px rgba(155, 124, 255, 0.24);
+  --line: rgba(143, 232, 226, 0.20);
+  --line-strong: rgba(143, 232, 226, 0.44);
+  --glow-cyan: 0 0 34px rgba(143, 232, 226, 0.22);
+  --glow-violet: 0 0 44px rgba(142, 160, 255, 0.18);
 }
 
 html { scroll-behavior: smooth; }
@@ -27,10 +27,10 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   background:
-    radial-gradient(circle at 16% -10%, rgba(101, 247, 255, 0.22), transparent 30rem),
-    radial-gradient(circle at 84% 8%, rgba(155, 124, 255, 0.26), transparent 34rem),
-    radial-gradient(circle at 60% 92%, rgba(200, 255, 106, 0.10), transparent 30rem),
-    linear-gradient(180deg, #02040c 0%, #07111f 46%, #02040c 100%);
+    radial-gradient(circle at 14% -8%, rgba(143, 232, 226, 0.16), transparent 30rem),
+    radial-gradient(circle at 84% 10%, rgba(142, 160, 255, 0.18), transparent 34rem),
+    radial-gradient(circle at 58% 92%, rgba(184, 230, 201, 0.08), transparent 30rem),
+    linear-gradient(180deg, #030711 0%, #07111f 48%, #030711 100%);
   color: var(--ink);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
@@ -42,8 +42,8 @@ body::before {
   z-index: -3;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(101, 247, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(101, 247, 255, 0.08) 1px, transparent 1px);
+    linear-gradient(rgba(143, 232, 226, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(143, 232, 226, 0.055) 1px, transparent 1px);
   background-size: 72px 72px;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.78), transparent 78%);
 }
@@ -61,11 +61,11 @@ body::after {
   opacity: 0.34;
 }
 
-::selection { background: rgba(101, 247, 255, 0.75); color: #02040c; }
+::selection { background: rgba(143, 232, 226, 0.75); color: #030711; }
 
 a {
   touch-action: manipulation;
-  -webkit-tap-highlight-color: rgba(101, 247, 255, 0.28);
+  -webkit-tap-highlight-color: rgba(143, 232, 226, 0.28);
 }
 
 .focus-ring:focus-visible {
@@ -86,8 +86,8 @@ a {
   width: 1px;
   pointer-events: none;
   z-index: 20;
-  background: linear-gradient(180deg, transparent, rgba(101,247,255,0.55), transparent);
-  opacity: 0.55;
+  background: linear-gradient(180deg, transparent, rgba(143,232,226,0.42), transparent);
+  opacity: 0.5;
 }
 
 .shell::before { left: clamp(1rem, 3vw, 2.5rem); }
@@ -97,10 +97,10 @@ a {
   position: relative;
   border: 1px solid var(--line);
   background:
-    linear-gradient(135deg, rgba(101,247,255,0.12), transparent 34%),
+    linear-gradient(135deg, rgba(143,232,226,0.10), transparent 34%),
     linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.025)),
     var(--panel);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.09), 0 28px 90px rgba(0,0,0,0.35), var(--glow-cyan);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 28px 90px rgba(0,0,0,0.35), var(--glow-cyan);
   backdrop-filter: blur(24px) saturate(140%);
 }
 
@@ -129,11 +129,11 @@ a {
 
 .dark-panel {
   position: relative;
-  border: 1px solid rgba(155,124,255,0.34);
+  border: 1px solid rgba(142,160,255,0.30);
   background:
-    radial-gradient(circle at 20% 10%, rgba(101,247,255,0.20), transparent 22rem),
-    radial-gradient(circle at 92% 24%, rgba(255,94,168,0.14), transparent 22rem),
-    linear-gradient(180deg, rgba(13, 24, 48, 0.94), rgba(4, 8, 18, 0.96));
+    radial-gradient(circle at 20% 10%, rgba(143,232,226,0.14), transparent 22rem),
+    radial-gradient(circle at 92% 24%, rgba(142,160,255,0.12), transparent 22rem),
+    linear-gradient(180deg, rgba(13, 25, 42, 0.94), rgba(4, 8, 18, 0.96));
   color: var(--ink);
   box-shadow: var(--glow-violet), 0 30px 100px rgba(0,0,0,0.45);
   overflow: hidden;
@@ -148,7 +148,7 @@ a {
   font-size: 0.72rem;
   font-weight: 900;
   color: var(--cyan);
-  text-shadow: 0 0 18px rgba(101,247,255,0.42);
+  text-shadow: 0 0 18px rgba(143,232,226,0.34);
 }
 
 .eyebrow::before {
@@ -163,7 +163,7 @@ a {
 .text-balance { text-wrap: balance; }
 
 .scanline {
-  background: linear-gradient(90deg, transparent, rgba(101,247,255,0.78), transparent);
+  background: linear-gradient(90deg, transparent, rgba(143,232,226,0.62), transparent);
   filter: blur(0.2px);
   animation: scanline 5.8s ease-in-out infinite;
 }
