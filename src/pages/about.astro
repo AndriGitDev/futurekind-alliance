@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import { party } from '../data/site';
+---
+<BaseLayout title="About" description="About and disclaimer for this fictional political design project.">
+  <Section eyebrow="About" title="This is a speculative design project, not a campaign." intro="The site explores how a fictional party might communicate Freedom Commons Federalism clearly and responsibly.">
+    <div class="grid gap-6 lg:grid-cols-[1fr_0.8fr]">
+      <article class="panel rounded-[2rem] p-6 text-lg leading-8 text-[#41515f] sm:p-10">
+        <p><strong class="text-[#14233b]">{party.name}</strong> is a fictional/speculative party concept. It is not registered, not soliciting votes, not raising funds, and not operating as an electoral organisation.</p>
+        <p class="mt-5">The purpose is civic imagination: testing whether a philosophy centred on anti-domination, universal rights, cooperative abundance, public-interest technology, and democratic federation can be explained without falling into authoritarian aesthetics, corporate blandness, or left/right cliché.</p>
+        <p class="mt-5">The site intentionally excludes donation flows, analytics, mailing-list capture, voter profiling, tracking pixels, manipulative urgency patterns, and real political party branding.</p>
+      </article>
+      <aside class="dark-panel rounded-[2rem] p-6">
+        <p class="eyebrow !text-[#f4c95d]">Design constraints</p>
+        <ul class="mt-5 space-y-4 text-[#fff8ea]/80">
+          <li>✓ Solarpunk optimism + civic seriousness</li>
+          <li>✓ Clean European public-service design</li>
+          <li>✓ Science-fiction dignity, no derivative branding</li>
+          <li>✕ No donations or voter targeting</li>
+          <li>✕ No Star Trek logos or copyrighted marks</li>
+          <li>✕ No authoritarian black/red militarism</li>
+        </ul>
+      </aside>
+    </div>
+  </Section>
+</BaseLayout>

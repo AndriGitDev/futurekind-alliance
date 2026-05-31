@@ -1,0 +1,28 @@
+---
+import { party } from '../data/site';
+---
+<section class="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1.08fr_0.92fr] lg:px-8 lg:py-24">
+  <div>
+    <p class="eyebrow">Speculative party prototype</p>
+    <h1 class="text-balance mt-4 text-5xl font-black tracking-tight text-[#14233b] sm:text-7xl">{party.name}</h1>
+    <p class="mt-6 max-w-2xl text-2xl font-semibold leading-tight text-[#1d746d]">{party.slogan}</p>
+    <p class="mt-6 max-w-2xl text-lg leading-8 text-[#41515f]">{party.shortLine}</p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a class="focus-ring rounded-full bg-[#14233b] px-6 py-3 font-bold text-[#fff8ea] shadow-xl shadow-[#14233b]/20 transition hover:-translate-y-0.5" href="/manifesto/">Read the manifesto</a>
+      <a class="focus-ring rounded-full border border-[#14233b]/20 bg-white/60 px-6 py-3 font-bold text-[#14233b] transition hover:-translate-y-0.5 hover:bg-white" href="/policies/">Explore policy pillars</a>
+    </div>
+  </div>
+  <div class="dark-panel relative overflow-hidden rounded-[2rem] p-8">
+    <div class="absolute -right-12 -top-12 size-48 rounded-full bg-[#f4c95d]/20 blur-2xl"></div>
+    <div class="absolute -bottom-16 left-8 size-52 rounded-full bg-[#2ba99a]/20 blur-2xl"></div>
+    <div class="relative">
+      <p class="eyebrow !text-[#f4c95d]">Freedom Commons Federalism</p>
+      <p class="mt-5 text-3xl font-black leading-tight">Technology should free people. The commons should protect freedom. Democracy should stay in citizens’ hands.</p>
+      <div class="mt-8 grid gap-3 text-sm text-[#fff8ea]/80 sm:grid-cols-3">
+        <span class="rounded-2xl bg-white/10 p-4">Public-interest AI, never machine rule</span>
+        <span class="rounded-2xl bg-white/10 p-4">Cooperative abundance, not extraction</span>
+        <span class="rounded-2xl bg-white/10 p-4">Exit rights, pluralism, federation</span>
+      </div>
+    </div>
+  </div>
+</section>

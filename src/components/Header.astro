@@ -1,0 +1,19 @@
+---
+import { navItems, party } from '../data/site';
+---
+<header class="sticky top-0 z-50 border-b border-[#14233b]/10 bg-[#fff8ea]/85 backdrop-blur-xl">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8" aria-label="Main navigation">
+    <a href="/" class="focus-ring flex items-center gap-3 rounded-full" aria-label={`${party.name} home`}>
+      <span class="grid size-10 place-items-center rounded-full bg-[#14233b] text-[#f4c95d] shadow-lg shadow-[#14233b]/20">✦</span>
+      <span class="hidden leading-tight sm:block">
+        <strong class="block text-sm text-[#14233b]">{party.name}</strong>
+        <span class="text-xs text-[#43605c]">{party.ideology}</span>
+      </span>
+    </a>
+    <div class="flex flex-wrap justify-end gap-1 text-sm font-semibold text-[#14233b]">
+      {navItems.map((item) => (
+        <a class="focus-ring rounded-full px-3 py-2 transition hover:bg-[#14233b] hover:text-[#fff8ea]" href={item.href}>{item.label}</a>
+      ))}
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --space: #14233b;
+  --space-2: #1e3152;
+  --solar: #f4c95d;
+  --teal: #2ba99a;
+  --paper: #fff8ea;
+  --paper-2: #f4ebd7;
+  --coral: #e37a63;
+  --ink: #172033;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(244, 201, 93, 0.20), transparent 32rem),
+    radial-gradient(circle at 80% 10%, rgba(43, 169, 154, 0.18), transparent 28rem),
+    linear-gradient(180deg, var(--paper), #fffdf7 44%, #edf7f4 100%);
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+::selection { background: rgba(244, 201, 93, 0.65); color: var(--space); }
+.focus-ring:focus-visible { outline: 3px solid var(--solar); outline-offset: 4px; }
+.panel { border: 1px solid rgba(20, 35, 59, 0.14); background: rgba(255, 253, 247, 0.82); box-shadow: 0 24px 80px rgba(20, 35, 59, 0.12); backdrop-filter: blur(18px); }
+.dark-panel { background: linear-gradient(135deg, rgba(43, 169, 154, 0.16), transparent 38%), linear-gradient(180deg, var(--space), #0f1b30); color: var(--paper); box-shadow: 0 26px 90px rgba(15, 27, 48, 0.28); }
+.eyebrow { letter-spacing: 0.18em; text-transform: uppercase; font-size: 0.76rem; font-weight: 800; color: #1d746d; }
+.text-balance { text-wrap: balance; }
