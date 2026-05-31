@@ -2,12 +2,12 @@
 interface Props { title: string; body: string; index: number; }
 const { title, body, index } = Astro.props;
 ---
-<article class="group rounded-3xl border border-[#14233b]/12 bg-white/70 p-6 shadow-sm transition hover:-translate-y-1 hover:bg-[#14233b] hover:text-[#fff8ea] hover:shadow-2xl">
+<article class="group rounded-[1.6rem] border border-cyan-200/18 bg-cyan-200/[0.045] p-6 shadow-[0_20px_70px_rgba(0,0,0,0.22)] transition duration-300 hover:-translate-y-1 hover:border-cyan-200/46 hover:bg-cyan-200/[0.085] hover:shadow-[0_0_34px_rgba(101,247,255,0.16)]">
   <div class="flex items-start gap-4">
-    <span class="grid size-12 shrink-0 place-items-center rounded-2xl bg-[#f4c95d] font-black text-[#14233b]">{index + 1}</span>
+    <span class="grid size-12 shrink-0 place-items-center rounded-2xl border border-lime-200/40 bg-lime-200/12 font-mono font-black text-lime-100 shadow-[0_0_22px_rgba(200,255,106,0.16)]">{String(index + 1).padStart(2, '0')}</span>
     <div>
-      <h3 class="text-xl font-black text-[#14233b] group-hover:text-[#fff8ea]">{title}</h3>
-      <p class="mt-3 leading-7 text-[#41515f] group-hover:text-[#fff8ea]/78">{body}</p>
+      <h3 class="text-xl font-black text-cyan-50">{title}</h3>
+      <p class="mt-3 leading-7 text-cyan-50/62">{body}</p>
     </div>
   </div>
 </article>

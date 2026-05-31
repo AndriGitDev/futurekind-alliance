@@ -1,27 +1,55 @@
 ---
 import { party } from '../data/site';
 ---
-<section class="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1.08fr_0.92fr] lg:px-8 lg:py-24">
+<section class="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_0.92fr] lg:px-8 lg:py-28">
+  <div class="pointer-events-none absolute left-4 top-10 hidden h-28 w-px bg-cyan-200/35 lg:block"></div>
   <div>
-    <p class="eyebrow">Fictional 2040 alliance website</p>
-    <h1 class="text-balance mt-4 text-5xl font-black tracking-tight text-[#14233b] sm:text-7xl">{party.name}</h1>
-    <p class="mt-6 max-w-2xl text-2xl font-semibold leading-tight text-[#1d746d]">{party.slogan}</p>
-    <p class="mt-6 max-w-2xl text-lg leading-8 text-[#41515f]">{party.shortLine}</p>
-    <div class="mt-8 flex flex-wrap gap-3">
-      <a class="focus-ring rounded-full bg-[#14233b] px-6 py-3 font-bold text-[#fff8ea] shadow-xl shadow-[#14233b]/20 transition hover:-translate-y-0.5" href="/manifesto/">Read the 2040 manifesto</a>
-      <a class="focus-ring rounded-full border border-[#14233b]/20 bg-white/60 px-6 py-3 font-bold text-[#14233b] transition hover:-translate-y-0.5 hover:bg-white" href="/federation/">See the federation</a>
+    <p class="eyebrow">Transmission from 2040 · Alliance public relay</p>
+    <h1 class="text-balance mt-5 max-w-5xl text-6xl font-black tracking-[-0.08em] text-cyan-50 sm:text-8xl lg:text-9xl">
+      <span class="block bg-gradient-to-br from-cyan-50 via-cyan-200 to-violet-200 bg-clip-text text-transparent drop-shadow-[0_0_28px_rgba(101,247,255,0.24)]">Futurekind</span>
+      <span class="block text-[0.62em] uppercase tracking-[0.22em] text-cyan-100/72">Alliance</span>
+    </h1>
+    <p class="mt-7 max-w-2xl text-2xl font-semibold leading-tight text-lime-100 sm:text-3xl">{party.slogan}</p>
+    <p class="mt-6 max-w-2xl text-lg leading-8 text-cyan-50/70">{party.shortLine}</p>
+    <div class="mt-9 flex flex-wrap gap-3">
+      <a class="focus-ring rounded-full border border-cyan-200/50 bg-cyan-200 px-6 py-3 font-black uppercase tracking-[0.16em] text-[#02040c] shadow-[0_0_34px_rgba(101,247,255,0.34)] transition hover:-translate-y-0.5 hover:bg-cyan-100" href="/manifesto/">Open manifesto</a>
+      <a class="focus-ring rounded-full border border-violet-200/35 bg-violet-200/10 px-6 py-3 font-black uppercase tracking-[0.16em] text-violet-50 transition hover:-translate-y-0.5 hover:bg-violet-200/18" href="/federation/">View federation map</a>
+    </div>
+    <div class="mt-8 grid max-w-2xl gap-3 text-xs uppercase tracking-[0.18em] text-cyan-100/54 sm:grid-cols-3">
+      <span class="border-l border-cyan-200/35 pl-3">Public-interest AI</span>
+      <span class="border-l border-cyan-200/35 pl-3">Exit rights encoded</span>
+      <span class="border-l border-cyan-200/35 pl-3">Commons infrastructure</span>
     </div>
   </div>
-  <div class="dark-panel relative overflow-hidden rounded-[2rem] p-8">
-    <div class="absolute -right-12 -top-12 size-48 rounded-full bg-[#f4c95d]/20 blur-2xl"></div>
-    <div class="absolute -bottom-16 left-8 size-52 rounded-full bg-[#2ba99a]/20 blur-2xl"></div>
-    <div class="relative">
-      <p class="eyebrow !text-[#f4c95d]">2040 · Freedom Commons Federalism</p>
-      <p class="mt-5 text-3xl font-black leading-tight">Cities, cooperatives, habitats, and colonies federated so technology frees people instead of ruling them.</p>
-      <div class="mt-8 grid gap-3 text-sm text-[#fff8ea]/80 sm:grid-cols-3">
-        <span class="rounded-2xl bg-white/10 p-4">Public-interest AI, never machine rule</span>
-        <span class="rounded-2xl bg-white/10 p-4">Federated colonies, not imperial colonies</span>
-        <span class="rounded-2xl bg-white/10 p-4">Exit rights, pluralism, shared commons</span>
+  <div class="dark-panel relative min-h-[34rem] overflow-hidden rounded-[2rem] p-6 sm:p-8">
+    <div class="absolute inset-x-10 top-12 h-px scanline"></div>
+    <div class="absolute -right-20 -top-20 size-64 rounded-full bg-cyan-300/15 blur-3xl"></div>
+    <div class="absolute -bottom-24 left-2 size-72 rounded-full bg-violet-400/18 blur-3xl"></div>
+    <div class="relative rounded-[1.5rem] border border-cyan-200/20 bg-black/22 p-5">
+      <div class="mb-6 flex items-center justify-between gap-4 text-xs uppercase tracking-[0.22em] text-cyan-100/58">
+        <span>FK-A / civicnet node</span>
+        <span>2040.11.03</span>
+      </div>
+      <div class="relative mx-auto aspect-square max-w-[26rem] rounded-full border border-cyan-200/24 bg-cyan-200/[0.03] p-8 shadow-[inset_0_0_60px_rgba(101,247,255,0.08)]">
+        <div class="absolute inset-8 rounded-full border border-violet-200/20"></div>
+        <div class="absolute inset-20 rounded-full border border-lime-200/20"></div>
+        <div class="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-cyan-200/12"></div>
+        <div class="absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-cyan-200/12"></div>
+        <div class="absolute left-[18%] top-[24%] size-3 rounded-full bg-cyan-200 shadow-[0_0_22px_rgba(101,247,255,0.9)]"></div>
+        <div class="absolute right-[23%] top-[17%] size-2 rounded-full bg-lime-200 shadow-[0_0_18px_rgba(200,255,106,0.9)]"></div>
+        <div class="absolute bottom-[22%] left-[27%] size-2 rounded-full bg-violet-200 shadow-[0_0_18px_rgba(155,124,255,0.9)]"></div>
+        <div class="absolute bottom-[30%] right-[19%] size-3 rounded-full bg-rose-300 shadow-[0_0_22px_rgba(255,94,168,0.75)]"></div>
+        <div class="grid h-full place-items-center text-center">
+          <div>
+            <p class="text-xs font-black uppercase tracking-[0.28em] text-lime-100/76">Freedom Commons Federalism</p>
+            <p class="mt-4 text-3xl font-black leading-tight text-cyan-50 sm:text-4xl">Cities, cooperatives, habitats, and civic colonies in one rights-preserving mesh.</p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-6 grid gap-3 text-sm text-cyan-50/72 sm:grid-cols-3">
+        <span class="rounded-2xl border border-cyan-200/18 bg-cyan-200/7 p-4">AI advises. People decide.</span>
+        <span class="rounded-2xl border border-cyan-200/18 bg-cyan-200/7 p-4">Federated colonies, not empires.</span>
+        <span class="rounded-2xl border border-cyan-200/18 bg-cyan-200/7 p-4">Exit, fork, rejoin with dignity.</span>
       </div>
     </div>
   </div>

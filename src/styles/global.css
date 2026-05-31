@@ -3,15 +3,21 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light;
-  --space: #14233b;
-  --space-2: #1e3152;
-  --solar: #f4c95d;
-  --teal: #2ba99a;
-  --paper: #fff8ea;
-  --paper-2: #f4ebd7;
-  --coral: #e37a63;
-  --ink: #172033;
+  color-scheme: dark;
+  --void: #030611;
+  --void-2: #07111f;
+  --ink: #e9fbff;
+  --muted: #8fb3c4;
+  --cyan: #65f7ff;
+  --violet: #9b7cff;
+  --lime: #c8ff6a;
+  --rose: #ff5ea8;
+  --panel: rgba(7, 17, 31, 0.72);
+  --panel-strong: rgba(9, 24, 42, 0.88);
+  --line: rgba(101, 247, 255, 0.20);
+  --line-strong: rgba(101, 247, 255, 0.46);
+  --glow-cyan: 0 0 34px rgba(101, 247, 255, 0.28);
+  --glow-violet: 0 0 44px rgba(155, 124, 255, 0.24);
 }
 
 html { scroll-behavior: smooth; }
@@ -19,17 +25,151 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   min-height: 100vh;
+  overflow-x: hidden;
   background:
-    radial-gradient(circle at top left, rgba(244, 201, 93, 0.20), transparent 32rem),
-    radial-gradient(circle at 80% 10%, rgba(43, 169, 154, 0.18), transparent 28rem),
-    linear-gradient(180deg, var(--paper), #fffdf7 44%, #edf7f4 100%);
+    radial-gradient(circle at 16% -10%, rgba(101, 247, 255, 0.22), transparent 30rem),
+    radial-gradient(circle at 84% 8%, rgba(155, 124, 255, 0.26), transparent 34rem),
+    radial-gradient(circle at 60% 92%, rgba(200, 255, 106, 0.10), transparent 30rem),
+    linear-gradient(180deg, #02040c 0%, #07111f 46%, #02040c 100%);
   color: var(--ink);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-::selection { background: rgba(244, 201, 93, 0.65); color: var(--space); }
-.focus-ring:focus-visible { outline: 3px solid var(--solar); outline-offset: 4px; }
-.panel { border: 1px solid rgba(20, 35, 59, 0.14); background: rgba(255, 253, 247, 0.82); box-shadow: 0 24px 80px rgba(20, 35, 59, 0.12); backdrop-filter: blur(18px); }
-.dark-panel { background: linear-gradient(135deg, rgba(43, 169, 154, 0.16), transparent 38%), linear-gradient(180deg, var(--space), #0f1b30); color: var(--paper); box-shadow: 0 26px 90px rgba(15, 27, 48, 0.28); }
-.eyebrow { letter-spacing: 0.18em; text-transform: uppercase; font-size: 0.76rem; font-weight: 800; color: #1d746d; }
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(101, 247, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(101, 247, 255, 0.08) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.78), transparent 78%);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(180deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 5px),
+    radial-gradient(circle at 50% 35%, transparent 0 42%, rgba(0,0,0,0.48) 100%);
+  mix-blend-mode: screen;
+  opacity: 0.34;
+}
+
+::selection { background: rgba(101, 247, 255, 0.75); color: #02040c; }
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 4px;
+  box-shadow: var(--glow-cyan);
+}
+
+.shell {
+  position: relative;
+}
+
+.shell::before,
+.shell::after {
+  content: "";
+  position: fixed;
+  inset-block: 0;
+  width: 1px;
+  pointer-events: none;
+  z-index: 20;
+  background: linear-gradient(180deg, transparent, rgba(101,247,255,0.55), transparent);
+  opacity: 0.55;
+}
+
+.shell::before { left: clamp(1rem, 3vw, 2.5rem); }
+.shell::after { right: clamp(1rem, 3vw, 2.5rem); }
+
+.holo-panel {
+  position: relative;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(101,247,255,0.12), transparent 34%),
+    linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.025)),
+    var(--panel);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.09), 0 28px 90px rgba(0,0,0,0.35), var(--glow-cyan);
+  backdrop-filter: blur(24px) saturate(140%);
+}
+
+.holo-panel::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, var(--cyan), transparent 22%, transparent 78%, var(--violet)) border-box;
+  mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  opacity: 0.68;
+}
+
+.panel {
+  position: relative;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(9, 24, 42, 0.82), rgba(6, 14, 27, 0.62));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 24px 80px rgba(0,0,0,0.26);
+  backdrop-filter: blur(18px);
+}
+
+.panel:hover { border-color: var(--line-strong); box-shadow: inset 0 1px 0 rgba(255,255,255,0.12), var(--glow-cyan), 0 24px 80px rgba(0,0,0,0.36); }
+
+.dark-panel {
+  position: relative;
+  border: 1px solid rgba(155,124,255,0.34);
+  background:
+    radial-gradient(circle at 20% 10%, rgba(101,247,255,0.20), transparent 22rem),
+    radial-gradient(circle at 92% 24%, rgba(255,94,168,0.14), transparent 22rem),
+    linear-gradient(180deg, rgba(13, 24, 48, 0.94), rgba(4, 8, 18, 0.96));
+  color: var(--ink);
+  box-shadow: var(--glow-violet), 0 30px 100px rgba(0,0,0,0.45);
+  overflow: hidden;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 900;
+  color: var(--cyan);
+  text-shadow: 0 0 18px rgba(101,247,255,0.42);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 0.58rem;
+  height: 0.58rem;
+  border: 1px solid currentColor;
+  transform: rotate(45deg);
+  box-shadow: 0 0 14px currentColor;
+}
+
 .text-balance { text-wrap: balance; }
+
+.scanline {
+  background: linear-gradient(90deg, transparent, rgba(101,247,255,0.78), transparent);
+  filter: blur(0.2px);
+  animation: scanline 5.8s ease-in-out infinite;
+}
+
+@keyframes scanline {
+  0%, 100% { transform: translateY(-20%); opacity: 0; }
+  12%, 62% { opacity: 0.8; }
+  78% { transform: translateY(1250%); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}

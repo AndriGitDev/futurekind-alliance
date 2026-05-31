@@ -20,8 +20,10 @@ const pageTitle = title === siteTitle ? title : `${title} · ${siteTitle}`;
     <title>{pageTitle}</title>
   </head>
   <body>
-    <Header />
-    <main><slot /></main>
-    <Footer />
+    <div class="shell min-h-screen">
+      <Header />
+      <main><slot /></main>
+      <Footer />
+    </div>
   </body>
 </html>

@@ -7,25 +7,25 @@ import { allianceModel } from '../data/site';
   <Section eyebrow="Federation" title="An alliance, not a centre of command." intro="Futurekind Alliance is imagined as a 2040 transnational formation: local autonomy, shared rights, common infrastructure, and peaceful exit.">
     <div class="grid gap-6 lg:grid-cols-2">
       <article class="panel rounded-[2rem] p-6">
-        <h2 class="text-2xl font-black text-[#14233b]">Member communities</h2>
+        <h2 class="text-2xl font-black text-cyan-50">Member communities</h2>
         <ul class="mt-5 space-y-3">
-          {allianceModel.members.map((member) => <li class="rounded-2xl bg-white/70 p-4 font-semibold text-[#14233b]">{member}</li>)}
+          {allianceModel.members.map((member) => <li class="rounded-2xl border border-cyan-200/18 bg-cyan-200/[0.055] p-4 font-semibold text-cyan-50/78">{member}</li>)}
         </ul>
       </article>
       <article class="dark-panel rounded-[2rem] p-6">
-        <h2 class="text-2xl font-black">2040 promise</h2>
-        <p class="mt-5 text-lg leading-8 text-[#fff8ea]/82">Colonies in this setting are consensual self-governing settlements and habitats — not extraction zones. The alliance exists to prevent company towns, machine rule, border precarity, and local majorities from becoming new forms of domination.</p>
+        <h2 class="text-2xl font-black text-cyan-50">2040 promise</h2>
+        <p class="mt-5 text-lg leading-8 text-cyan-50/72">Colonies in this setting are consensual self-governing settlements and habitats — not extraction zones. The alliance exists to prevent company towns, machine rule, border precarity, and local majorities from becoming new forms of domination.</p>
       </article>
       <article class="panel rounded-[2rem] p-6 lg:col-span-2">
-        <h2 class="text-2xl font-black text-[#14233b]">Constitutional layers</h2>
+        <h2 class="text-2xl font-black text-cyan-50">Constitutional layers</h2>
         <div class="mt-5 grid gap-5 md:grid-cols-2">
-          {allianceModel.constitutionalLayers.map((layer) => <div class="rounded-3xl bg-white/70 p-5"><strong class="text-[#14233b]">{layer.title}</strong><p class="mt-3 text-[#41515f]">{layer.body}</p></div>)}
+          {allianceModel.constitutionalLayers.map((layer) => <div class="rounded-3xl border border-violet-200/20 bg-violet-200/[0.055] p-5"><strong class="text-violet-50">{layer.title}</strong><p class="mt-3 text-cyan-50/62">{layer.body}</p></div>)}
         </div>
       </article>
       <article class="panel rounded-[2rem] p-6 lg:col-span-2">
-        <h2 class="text-2xl font-black text-[#14233b]">Slogan studies</h2>
+        <h2 class="text-2xl font-black text-cyan-50">Slogan studies</h2>
         <div class="mt-5 grid gap-3 md:grid-cols-2">
-          {allianceModel.slogans.map((slogan) => <p class="rounded-2xl bg-white/70 p-4 font-semibold text-[#14233b]">“{slogan}”</p>)}
+          {allianceModel.slogans.map((slogan) => <p class="rounded-2xl border border-lime-200/20 bg-lime-200/[0.07] p-4 font-semibold text-lime-50">“{slogan}”</p>)}
         </div>
       </article>
     </div>
