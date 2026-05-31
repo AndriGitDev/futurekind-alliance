@@ -26,22 +26,36 @@ const pageTitle = title === siteTitle ? title : `${title} · ${siteTitle}`;
       <Footer />
     </div>
     <script>
-      // Some mobile in-app browsers can swallow the first tap on heavily styled
-      // hoverable links. Keep navigation boring and explicit for all internal
-      // site links: pointer-up/click goes straight to the target URL.
+      // Mobile-first reliability layer for internal navigation. A few Android
+      // Chromium/Samsung Browser builds can treat visually rich links as a
+      // hover target and fail to complete native anchor navigation. Keep the
+      // actual routing deliberately boring: any tap/click/touch ending on an
+      // internal link assigns the URL directly.
       (() => {
-        const navigate = (event: MouseEvent | PointerEvent) => {
-          if (event.defaultPrevented || event.button > 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-          if (!(event.target instanceof Element)) return;
-          const anchor = event.target.closest('a[href]') as HTMLAnchorElement | null;
+        const getAnchor = (target: EventTarget | null): HTMLAnchorElement | null => {
+          if (!target) return null;
+          const node = target instanceof Node && target.nodeType === Node.TEXT_NODE ? target.parentElement : target;
+          return node instanceof Element ? node.closest<HTMLAnchorElement>('a[href]') : null;
+        };
+
+        const go = (event: MouseEvent | PointerEvent | TouchEvent) => {
+          if (event.defaultPrevented) return;
+          if ('button' in event && event.button > 0) return;
+          if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+          const anchor = getAnchor(event.target);
           if (!anchor || anchor.target || anchor.hasAttribute('download')) return;
+
           const url = new URL(anchor.href, window.location.href);
           if (url.origin !== window.location.origin || url.href === window.location.href) return;
+
           event.preventDefault();
-          window.location.assign(url.href);
+          window.location.href = url.href;
         };
-        document.addEventListener('pointerup', navigate, { capture: true });
-        document.addEventListener('click', navigate, { capture: true });
+
+        document.addEventListener('touchend', go, { capture: true, passive: false });
+        document.addEventListener('pointerup', go, { capture: true });
+        document.addEventListener('click', go, { capture: true });
       })();
     </script>
   </body>
