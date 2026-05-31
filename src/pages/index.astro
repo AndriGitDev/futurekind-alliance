@@ -4,15 +4,33 @@ import Hero from '../components/Hero.astro';
 import Section from '../components/Section.astro';
 import PrincipleCard from '../components/PrincipleCard.astro';
 import PolicyCard from '../components/PolicyCard.astro';
-import { party, principles, policies } from '../data/site';
+import { allianceStats, council, party, principles, policies } from '../data/site';
 ---
 <BaseLayout description={party.shortLine}>
   <Hero />
-  <Section eyebrow="Signal brief" title="A 2040 alliance for real freedom." intro="Futurekind Alliance imagines an international federation where survival is not conditional on obedience, civic colonies are self-governing rather than imperial, technology reduces toil instead of concentrating power, and democracy remains legible enough for citizens to control.">
+  <Section eyebrow="Signal brief" title="A 2040 alliance for real freedom." intro="Futurekind Alliance is an international federation where survival is not conditional on obedience, civic colonies are self-governing rather than imperial, technology reduces toil instead of concentrating power, and democracy remains legible enough for citizens to control.">
     <div class="grid gap-4 md:grid-cols-3">
       <div class="holo-panel rounded-[1.7rem] p-6 text-cyan-50"><strong class="text-2xl font-black">Maximum freedom</strong><p class="mt-3 text-cyan-50/66">Not merely fewer rules, but fewer masters: no domination by poverty, monopoly, borders, bureaucracy, violence, platforms, colonies, or machines.</p></div>
       <div class="rounded-[1.7rem] border border-lime-200/30 bg-lime-200/12 p-6 text-lime-50 shadow-[0_0_34px_rgba(200,255,106,0.12)]"><strong class="text-2xl font-black">Shared abundance</strong><p class="mt-3 text-lime-50/70">Cooperative automation, public-interest infrastructure, and commons trusts turn productivity into freedom time and universal security.</p></div>
       <div class="rounded-[1.7rem] border border-violet-200/30 bg-violet-200/12 p-6 text-violet-50 shadow-[0_0_34px_rgba(155,124,255,0.12)]"><strong class="text-2xl font-black">Federated worlds</strong><p class="mt-3 text-violet-50/70">Cities, habitats, settlements, and cooperatives stay locally rooted while sharing rights, infrastructure, and peaceful exit.</p></div>
+    </div>
+  </Section>
+  <Section eyebrow="Federation snapshot" title="A public-facing alliance with names, offices, and limits." intro="The 2040 version should feel like a functioning institution: concrete membership numbers, accountable leaders, and constitutional limits on what leadership can do.">
+    <div class="grid gap-5 lg:grid-cols-[0.9fr_1.1fr]">
+      <article class="panel rounded-[2rem] p-6">
+        <p class="eyebrow">{council.term}</p>
+        <h2 class="mt-3 text-3xl font-black text-cyan-50">Convened by {council.leaders[0].name}</h2>
+        <p class="mt-4 text-cyan-50/68">{council.note}</p>
+        <a class="focus-ring mt-6 inline-flex rounded-full border border-cyan-200/35 px-5 py-3 text-sm font-black uppercase tracking-[0.16em] text-cyan-50 hover:bg-cyan-200/10" href="/council/">Meet the council</a>
+      </article>
+      <div class="grid gap-4 sm:grid-cols-2">
+        {allianceStats.map((stat) => (
+          <div class="rounded-[1.7rem] border border-lime-200/22 bg-lime-200/[0.075] p-6 text-lime-50">
+            <strong class="block text-4xl font-black">{stat.value}</strong>
+            <span class="mt-2 block text-sm font-bold uppercase tracking-[0.18em] text-lime-50/68">{stat.label}</span>
+          </div>
+        ))}
+      </div>
     </div>
   </Section>
   <Section eyebrow="Principles" title="Rules of thumb for a non-dominating future." intro="Short enough to scan, demanding enough to shape institutions across borders and colonies.">

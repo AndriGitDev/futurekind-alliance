@@ -4,16 +4,15 @@ import { navItems, party } from '../data/site';
 <header class="sticky top-0 z-50 border-b border-cyan-200/15 bg-[#02040c]/72 backdrop-blur-2xl supports-[backdrop-filter]:bg-[#02040c]/55">
   <nav class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8" aria-label="Main navigation">
     <a href="/" class="focus-ring group flex items-center gap-3 rounded-full" aria-label={`${party.name} home`}>
-      <span class="relative grid size-11 place-items-center rounded-full border border-cyan-200/35 bg-cyan-200/10 text-cyan-100 shadow-[0_0_28px_rgba(101,247,255,0.24)]">
-        <span class="absolute inset-1 rounded-full border border-violet-300/30"></span>
-        <span class="text-lg transition group-hover:rotate-45">✦</span>
+      <span class="relative grid size-11 place-items-center rounded-full border border-cyan-200/35 bg-cyan-200/10 shadow-[0_0_28px_rgba(101,247,255,0.24)] transition group-hover:rotate-6">
+        <img src="/assets/alliance-emblem.svg" alt="" class="size-10 rounded-full" loading="eager" />
       </span>
       <span class="hidden leading-tight sm:block">
         <strong class="block text-sm uppercase tracking-[0.28em] text-cyan-100">{party.name}</strong>
         <span class="text-xs text-cyan-100/58">{party.ideology} · Civicnet 2040</span>
       </span>
     </a>
-    <div class="flex flex-wrap justify-end gap-1 text-xs font-bold uppercase tracking-[0.16em] text-cyan-100/72 sm:text-[0.8rem]">
+    <div class="flex flex-wrap justify-end gap-1 text-[0.68rem] font-bold uppercase tracking-[0.11em] text-cyan-100/72 sm:text-xs lg:tracking-[0.14em]">
       {navItems.map((item) => (
         <a class="focus-ring rounded-full border border-transparent px-3 py-2 transition hover:border-cyan-200/35 hover:bg-cyan-200/10 hover:text-cyan-50 hover:shadow-[0_0_18px_rgba(101,247,255,0.18)]" href={item.href}>{item.label}</a>
       ))}

@@ -11,6 +11,9 @@ import { party } from '../data/site';
     </h1>
     <p class="mt-7 max-w-2xl text-2xl font-semibold leading-tight text-lime-100 sm:text-3xl">{party.slogan}</p>
     <p class="mt-6 max-w-2xl text-lg leading-8 text-cyan-50/70">{party.shortLine}</p>
+    <div class="mt-8 max-w-xl rounded-[1.4rem] border border-cyan-200/18 bg-black/24 p-3 shadow-[0_0_34px_rgba(101,247,255,0.12)]">
+      <img src="/assets/alliance-wordmark.svg" alt="Futurekind Alliance wordmark" class="w-full rounded-[1rem]" loading="eager" />
+    </div>
     <div class="mt-9 flex flex-wrap gap-3">
       <a class="focus-ring rounded-full border border-cyan-200/50 bg-cyan-200 px-6 py-3 font-black uppercase tracking-[0.16em] text-[#02040c] shadow-[0_0_34px_rgba(101,247,255,0.34)] transition hover:-translate-y-0.5 hover:bg-cyan-100" href="/manifesto/">Open manifesto</a>
       <a class="focus-ring rounded-full border border-violet-200/35 bg-violet-200/10 px-6 py-3 font-black uppercase tracking-[0.16em] text-violet-50 transition hover:-translate-y-0.5 hover:bg-violet-200/18" href="/federation/">View federation map</a>
@@ -30,21 +33,8 @@ import { party } from '../data/site';
         <span>FK-A / civicnet node</span>
         <span>2040.11.03</span>
       </div>
-      <div class="relative mx-auto aspect-square max-w-[26rem] rounded-full border border-cyan-200/24 bg-cyan-200/[0.03] p-8 shadow-[inset_0_0_60px_rgba(101,247,255,0.08)]">
-        <div class="absolute inset-8 rounded-full border border-violet-200/20"></div>
-        <div class="absolute inset-20 rounded-full border border-lime-200/20"></div>
-        <div class="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-cyan-200/12"></div>
-        <div class="absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-cyan-200/12"></div>
-        <div class="absolute left-[18%] top-[24%] size-3 rounded-full bg-cyan-200 shadow-[0_0_22px_rgba(101,247,255,0.9)]"></div>
-        <div class="absolute right-[23%] top-[17%] size-2 rounded-full bg-lime-200 shadow-[0_0_18px_rgba(200,255,106,0.9)]"></div>
-        <div class="absolute bottom-[22%] left-[27%] size-2 rounded-full bg-violet-200 shadow-[0_0_18px_rgba(155,124,255,0.9)]"></div>
-        <div class="absolute bottom-[30%] right-[19%] size-3 rounded-full bg-rose-300 shadow-[0_0_22px_rgba(255,94,168,0.75)]"></div>
-        <div class="grid h-full place-items-center text-center">
-          <div>
-            <p class="text-xs font-black uppercase tracking-[0.28em] text-lime-100/76">Freedom Commons Federalism</p>
-            <p class="mt-4 text-3xl font-black leading-tight text-cyan-50 sm:text-4xl">Cities, cooperatives, habitats, and civic colonies in one rights-preserving mesh.</p>
-          </div>
-        </div>
+      <div class="relative mx-auto overflow-hidden rounded-[1.4rem] border border-cyan-200/24 bg-cyan-200/[0.03] shadow-[inset_0_0_60px_rgba(101,247,255,0.08)]">
+        <img src="/assets/civicnet-map.svg" alt="Civicnet federation relay map for Futurekind Alliance member chapters" class="w-full" loading="eager" />
       </div>
       <div class="mt-6 grid gap-3 text-sm text-cyan-50/72 sm:grid-cols-3">
         <span class="rounded-2xl border border-cyan-200/18 bg-cyan-200/7 p-4">AI advises. People decide.</span>

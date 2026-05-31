@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import { allianceStats, council, party } from '../data/site';
+---
+<BaseLayout title="Council" description="The fictional 2040 Alliance Council and provisional leadership of Futurekind Alliance.">
+  <Section
+    eyebrow="Alliance Council"
+    title="Recallable leadership for a federation that refuses to become a centre of command."
+    intro="Futurekind Alliance is led by a rotating council: visible enough to be accountable, weak enough to be replaced, and bound by rights the council cannot suspend."
+  >
+    <div class="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+      <article class="panel rounded-[2rem] p-6 sm:p-8">
+        <p class="eyebrow">Current mandate</p>
+        <h2 class="mt-3 text-3xl font-black text-cyan-50">{council.term}</h2>
+        <p class="mt-5 text-lg leading-8 text-cyan-50/70">{council.note}</p>
+        <div class="mt-8 grid gap-4 sm:grid-cols-2">
+          {allianceStats.map((stat) => (
+            <div class="rounded-3xl border border-cyan-200/18 bg-cyan-200/[0.055] p-5">
+              <strong class="block text-3xl font-black text-lime-100">{stat.value}</strong>
+              <span class="mt-1 block text-sm font-bold uppercase tracking-[0.18em] text-cyan-50/58">{stat.label}</span>
+            </div>
+          ))}
+        </div>
+      </article>
+      <aside class="dark-panel rounded-[2rem] p-6 sm:p-8">
+        <img src="/assets/council-credential.svg" alt="Alliance Council public credential card" class="mb-6 w-full rounded-[1.4rem] border border-cyan-200/18 shadow-[0_0_34px_rgba(101,247,255,0.12)]" loading="lazy" />
+        <p class="eyebrow">2040 operating rule</p>
+        <blockquote class="mt-5 text-2xl font-black leading-tight text-cyan-50">“Delegate the workload. Keep the power.”</blockquote>
+        <p class="mt-5 text-cyan-50/68">Council members can convene, propose, coordinate emergencies, and publish trade-off briefs. They cannot sell member assets, override personhood rights, suspend exit, or bind chapters without ratification.</p>
+        <p class="mt-5 rounded-2xl border border-lime-200/20 bg-lime-200/[0.08] p-4 text-sm font-semibold text-lime-50/82">Every named office has a public recall path, an auditable conflict register, and a deputy selected by sortition from qualified chapter stewards.</p>
+      </aside>
+    </div>
+  </Section>
+
+  <Section eyebrow="2040 leadership" title="The provisional council." intro="The alliance presents leadership as service infrastructure, not heroic command. Names are attached to jobs, limits, chapters, and recall mechanisms.">
+    <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+      {council.leaders.map((leader) => (
+        <article class="panel rounded-[1.8rem] p-6">
+          <p class="eyebrow">{leader.chapter}</p>
+          <h2 class="mt-3 text-2xl font-black text-cyan-50">{leader.name}</h2>
+          <p class="mt-2 font-bold text-lime-100">{leader.role}</p>
+          <p class="mt-4 leading-7 text-cyan-50/66">{leader.bio}</p>
+        </article>
+      ))}
+    </div>
+  </Section>
+
+  <Section eyebrow="How power flows" title="Offices propose. Members ratify. People retain rights." intro={`${party.name} treats leadership as coordination under constitutional constraint.`}>
+    <div class="grid gap-5 lg:grid-cols-3">
+      <div class="rounded-[1.7rem] border border-violet-200/25 bg-violet-200/[0.075] p-6 text-violet-50"><strong class="text-xl font-black">Citizen chamber</strong><p class="mt-3 text-violet-50/70">Approves constitutional amendments, repeal triggers, rights standards, and major commons commitments.</p></div>
+      <div class="rounded-[1.7rem] border border-cyan-200/25 bg-cyan-200/[0.075] p-6 text-cyan-50"><strong class="text-xl font-black">Member stewards</strong><p class="mt-3 text-cyan-50/70">Represent municipalities, co-ops, settlements, habitats, and service commons in day-to-day federation work.</p></div>
+      <div class="rounded-[1.7rem] border border-lime-200/25 bg-lime-200/[0.075] p-6 text-lime-50"><strong class="text-xl font-black">Rights guardians</strong><p class="mt-3 text-lime-50/70">Can halt decisions that violate personhood, exit, due process, or anti-domination protections pending review.</p></div>
+    </div>
+  </Section>
+</BaseLayout>

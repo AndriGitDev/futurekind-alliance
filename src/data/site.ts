@@ -3,16 +3,18 @@ export const party = {
   ideology: 'Freedom Commons Federalism',
   setting: '2040',
   slogan: 'Maximum freedom. Shared abundance. No domination.',
-  shortLine: 'A fictional 2040 international political alliance of federated communities, civic colonies, cooperatives, and public-interest technology — built to make freedom real beyond borders, monopolies, and machines.',
-  disclaimer: 'This is a fictional/speculative 2040 political design project, not a registered political organisation, active electoral campaign, donation vehicle, or voter-targeting operation.',
+  shortLine: 'A 2040 international alliance of federated communities, civic colonies, cooperatives, and public-interest technology — built to make freedom real beyond borders, monopolies, and machines.',
+  disclaimer: 'Speculative civic fiction: not a registered organisation, campaign, or fundraising vehicle.',
 };
 
 export const navItems = [
   { href: '/', label: 'Home' },
   { href: '/manifesto/', label: 'Manifesto' },
   { href: '/principles/', label: 'Principles' },
-  { href: '/policies/', label: 'Policy pillars' },
+  { href: '/policies/', label: 'Policies' },
   { href: '/federation/', label: 'Federation' },
+  { href: '/council/', label: 'Council' },
+  { href: '/identity/', label: 'Identity' },
   { href: '/about/', label: 'About' },
 ];
 
@@ -43,6 +45,56 @@ export const policies = [
   { title: 'Narrow Safety Holds', body: 'For serious operational harm, allow time-limited, appealable, independently reviewed disclosure delays tied to mitigation — never censorship of politics.' },
   { title: 'Peaceful exit and forking', body: 'Protect the right to leave with data, credentials, personal property, and transition support while preventing seizure or destruction of shared essentials.' },
 ];
+
+export const allianceStats = [
+  { value: '312', label: 'member municipalities' },
+  { value: '48', label: 'federated co-ops and commons trusts' },
+  { value: '9', label: 'climate-adaptation settlements' },
+  { value: '3', label: 'orbital and remote research chapters' },
+];
+
+export const council = {
+  term: '2040–2044 provisional mandate',
+  note: 'The Alliance Council is recallable, term-limited, and split between citizen-elected delegates, member-community stewards, and independent rights guardians.',
+  leaders: [
+    {
+      name: 'Leena Varga',
+      role: 'Convenor of the Alliance Council',
+      chapter: 'Danube Reconstruction Compact',
+      bio: 'Former civil engineer and river-basin negotiator who brokered the first flood-adaptation commons between Vienna, Bratislava, and community land trusts along the lower Danube.',
+    },
+    {
+      name: 'Asha Nyberg',
+      role: 'General Secretary for Federation Operations',
+      chapter: 'Reykjavík Civicnet Chapter',
+      bio: 'Coordinates chapter recognition, emergency interoperability, and the boring administrative machinery that keeps a voluntary federation from becoming either chaos or empire.',
+    },
+    {
+      name: 'Kojo Mensah-Okoye',
+      role: 'Steward for Commons Infrastructure',
+      chapter: 'Accra Coastal Works Cooperative',
+      bio: 'Led municipal microgrid and desalination transitions before joining the alliance to turn survival infrastructure into locally governed public abundance rather than concession contracts.',
+    },
+    {
+      name: 'Mei Tanaka Iversen',
+      role: 'Public-Interest AI and Civic Systems Commissioner',
+      chapter: 'Kobe–Oslo Machine Accountability Forum',
+      bio: 'Architect of the open audit standard used by member cities to keep planning models explainable, appealable, and subordinate to human rights decisions.',
+    },
+    {
+      name: 'Samira al-Haddad',
+      role: 'Rights and Mobility Ombud',
+      chapter: 'Eastern Mediterranean Safe Passage Network',
+      bio: 'Defends personhood rights across borders, colonies, platforms, and employers; famous inside the alliance for the phrase “capacity is real, worth is not conditional.”',
+    },
+    {
+      name: 'Rán Jónsdóttir-Kapoor',
+      role: 'Speaker for Settlements and Habitats',
+      chapter: 'North Atlantic / L5 Research Habitat Caucus',
+      bio: 'Represents remote settlements, polar stations, sea platforms, and orbital research habitats where exit rights, supply chains, and commons governance have to work under pressure.',
+    },
+  ],
+};
 
 export const allianceModel = {
   members: [
