@@ -4,8 +4,8 @@ import Section from '../components/Section.astro';
 import PolicyCard from '../components/PolicyCard.astro';
 import { policies } from '../data/site';
 ---
-<BaseLayout title="Policy pillars" description="Ten policy pillars for the fictional Commons Future Party.">
-  <Section eyebrow="Policy pillars" title="Ten pillars for a commons that expands freedom." intro="These are starting points for institutional design, not a finished legislative programme.">
+<BaseLayout title="Policy pillars" description="Ten policy pillars for the fictional 2040 Futurekind Alliance.">
+  <Section eyebrow="Policy pillars" title="Ten pillars for a commons that expands freedom." intro="These are starting points for institutional design across cities, colonies, cooperatives, and federated public infrastructure — not a finished legislative programme.">
     <div class="grid gap-5 lg:grid-cols-2">
       {policies.map((policy, index) => <PolicyCard {...policy} index={index} />)}
     </div>

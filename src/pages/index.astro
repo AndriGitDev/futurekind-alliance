@@ -8,19 +8,19 @@ import { party, principles, policies } from '../data/site';
 ---
 <BaseLayout description={party.shortLine}>
   <Hero />
-  <Section eyebrow="The one-minute version" title="A party-shaped thought experiment for real freedom." intro="The Commons Future Party imagines a society where survival is not conditional on obedience, technology reduces toil instead of concentrating power, and democracy remains legible enough for citizens to control.">
+  <Section eyebrow="The one-minute version" title="A 2040 alliance for real freedom." intro="Futurekind Alliance imagines an international federation where survival is not conditional on obedience, civic colonies are self-governing rather than imperial, technology reduces toil instead of concentrating power, and democracy remains legible enough for citizens to control.">
     <div class="grid gap-4 md:grid-cols-3">
-      <div class="rounded-3xl bg-[#14233b] p-6 text-[#fff8ea]"><strong class="text-xl">Maximum freedom</strong><p class="mt-3 text-[#fff8ea]/75">Not merely fewer rules, but fewer masters: no domination by poverty, monopoly, borders, bureaucracy, violence, platforms, or machines.</p></div>
+      <div class="rounded-3xl bg-[#14233b] p-6 text-[#fff8ea]"><strong class="text-xl">Maximum freedom</strong><p class="mt-3 text-[#fff8ea]/75">Not merely fewer rules, but fewer masters: no domination by poverty, monopoly, borders, bureaucracy, violence, platforms, colonies, or machines.</p></div>
       <div class="rounded-3xl bg-[#2ba99a] p-6 text-[#082822]"><strong class="text-xl">Shared abundance</strong><p class="mt-3 text-[#082822]/75">Cooperative automation, public-interest infrastructure, and commons trusts turn productivity into freedom time and universal security.</p></div>
-      <div class="rounded-3xl bg-[#f4c95d] p-6 text-[#14233b]"><strong class="text-xl">No domination</strong><p class="mt-3 text-[#14233b]/75">Every institution must remain accountable, appealable, forkable, and bound by rights.</p></div>
+      <div class="rounded-3xl bg-[#f4c95d] p-6 text-[#14233b]"><strong class="text-xl">Federated worlds</strong><p class="mt-3 text-[#14233b]/75">Cities, habitats, settlements, and cooperatives stay locally rooted while sharing rights, infrastructure, and peaceful exit.</p></div>
     </div>
   </Section>
-  <Section eyebrow="Principles" title="Rules of thumb for a non-dominating future." intro="Short enough to scan, demanding enough to shape institutions.">
+  <Section eyebrow="Principles" title="Rules of thumb for a non-dominating future." intro="Short enough to scan, demanding enough to shape institutions across borders and colonies.">
     <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
       {principles.slice(0, 6).map((principle, index) => <PrincipleCard {...principle} index={index} />)}
     </div>
   </Section>
-  <Section eyebrow="Policy pillars" title="Ten starting points, not a finished constitution." intro="Each pillar converts the philosophy into a design question for law, infrastructure, and public institutions.">
+  <Section eyebrow="Policy pillars" title="Ten starting points, not a finished constitution." intro="Each pillar converts the philosophy into a design question for law, infrastructure, member communities, and public institutions.">
     <div class="grid gap-5 lg:grid-cols-2">
       {policies.slice(0, 4).map((policy, index) => <PolicyCard {...policy} index={index} />)}
     </div>

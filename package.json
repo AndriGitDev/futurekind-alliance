@@ -1,9 +1,9 @@
 {
-  "name": "commons-future-party",
+  "name": "futurekind-alliance",
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Fictional/speculative website for The Commons Future Party and Freedom Commons Federalism.",
+  "description": "Fictional/speculative 2040 website for Futurekind Alliance and Freedom Commons Federalism.",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

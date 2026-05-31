@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Commons Future Party symbol">
-  <rect width="64" height="64" rx="18" fill="#14233b"/>
-  <path d="M14 39c8-14 28-14 36 0" fill="none" stroke="#f4c95d" stroke-width="6" stroke-linecap="round"/>
-  <path d="M20 34c6-8 18-8 24 0" fill="none" stroke="#2ba99a" stroke-width="5" stroke-linecap="round"/>
-  <circle cx="32" cy="28" r="5" fill="#fff8ea"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Futurekind Alliance symbol"><rect width="64" height="64" rx="16" fill="#14233b"/><path d="M12 39c8-17 32-17 40 0" fill="none" stroke="#f4c95d" stroke-width="6" stroke-linecap="round"/><path d="M18 42c6-10 22-10 28 0" fill="none" stroke="#2ba99a" stroke-width="5" stroke-linecap="round"/><circle cx="32" cy="24" r="6" fill="#fff8ea"/><path d="M32 13v-5M46 22l4-4M18 22l-4-4" stroke="#fff8ea" stroke-width="4" stroke-linecap="round"/></svg>

@@ -4,8 +4,8 @@ import Section from '../components/Section.astro';
 import PrincipleCard from '../components/PrincipleCard.astro';
 import { principles } from '../data/site';
 ---
-<BaseLayout title="Principles" description="Core principles of Freedom Commons Federalism.">
-  <Section eyebrow="Principles" title="Compact rules for freedom without domination." intro="These cards are intentionally portable: they should survive changes to party name, colours, slogans, and campaign-shaped language.">
+<BaseLayout title="Principles" description="Principles for the fictional 2040 Futurekind Alliance.">
+  <Section eyebrow="Principles" title="Compact rules for freedom without domination." intro="These cards are intentionally portable: they should survive changes to colours, slogans, member communities, and campaign-shaped language.">
     <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
       {principles.map((principle, index) => <PrincipleCard {...principle} index={index} />)}
     </div>
