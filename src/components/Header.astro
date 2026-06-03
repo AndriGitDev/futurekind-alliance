@@ -1,5 +1,9 @@
 ---
 import { navItems, party } from '../data/site';
+
+const { pathname } = Astro.url;
+const normalize = (path: string) => path.replace(/\/$/, '') || '/';
+const isActive = (href: string) => normalize(pathname) === normalize(href);
 ---
 <header class="sticky top-0 z-50 border-b border-cyan-200/15 bg-[#030711]/78 backdrop-blur-2xl supports-[backdrop-filter]:bg-[#030711]/62">
   <nav class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8" aria-label="Main navigation">
@@ -13,9 +17,23 @@ import { navItems, party } from '../data/site';
       </span>
     </a>
     <div class="flex flex-wrap justify-end gap-1 text-[0.68rem] font-bold uppercase tracking-[0.11em] text-cyan-100/72 sm:text-xs lg:tracking-[0.14em]">
-      {navItems.map((item) => (
-        <a class="focus-ring rounded-full border border-transparent px-3 py-2 transition hover:border-cyan-200/35 hover:bg-cyan-200/10 hover:text-cyan-50 hover:shadow-[0_0_18px_rgba(143,232,226,0.16)]" href={item.href}>{item.label}</a>
-      ))}
+      {navItems.map((item) => {
+        const active = isActive(item.href);
+        return (
+          <a
+            class:list={[
+              "focus-ring rounded-full border px-3 py-2 transition",
+              active
+                ? "border-cyan-200/35 bg-cyan-200/10 text-cyan-50 shadow-[0_0_18px_rgba(143,232,226,0.16)]"
+                : "border-transparent hover:border-cyan-200/35 hover:bg-cyan-200/10 hover:text-cyan-50 hover:shadow-[0_0_18px_rgba(143,232,226,0.16)]"
+            ]}
+            href={item.href}
+            aria-current={active ? 'page' : undefined}
+          >
+            {item.label}
+          </a>
+        );
+      })}
     </div>
   </nav>
 </header>
