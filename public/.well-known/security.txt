@@ -1,0 +1,4 @@
+Contact: https://github.com/AndriGitDev/futurekind-alliance/security/advisories/new
+Expires: 2027-07-19T00:00:00Z
+Preferred-Languages: en, is
+Canonical: https://futurekind.andri.is/.well-known/security.txt
